@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="default" template="/WEB-INF/tiles/template.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/tiles/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+	
+	<definition name="admin" template="/WEB-INF/tiles/admintemplate.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/headerAdmin.jsp" />
+		<put-attribute name="body" value="/WEB-INF/tiles/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+
+	<definition extends="admin" name="createCategory">
+        <put-attribute name="body" value="/WEB-INF/jsp/category/createCategory.jsp"/>
+    </definition>
+    <definition extends="admin" name="updateCategory">
+        <put-attribute name="body" value="/WEB-INF/jsp/category/updateCategory.jsp"/>
+    </definition>
+    <definition extends="admin" name="listCategories">
+        <put-attribute name="body" value="/WEB-INF/jsp/category/listCategories.jsp"/>
+    </definition>
+	<definition extends="default" name="viewCategories">
+		<put-attribute name="body" value="/WEB-INF/jsp/category/viewCategories.jsp"/>
+	</definition>
+
+
+	<definition extends="default" name="confirmUser">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/confirmUser.jsp"/>
+	</definition>
+	<definition extends="default" name="confirmMail">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/confirmMail.jsp"/>
+	</definition>
+	<definition extends="default" name="createUser">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/createUser.jsp"/>
+	</definition>
+    <definition extends="admin" name="deleteUser">
+        <put-attribute name="body" value="/WEB-INF/jsp/user/deleteUser.jsp"/>
+    </definition>
+    <definition extends="default" name="updateUser">
+        <put-attribute name="body" value="/WEB-INF/jsp/user/updateUser.jsp"/>
+    </definition>
+	<definition extends="admin" name="updateUsers">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/updateUsers.jsp"/>
+	</definition>
+
+    <definition extends="default" name="home">
+        <put-attribute name="body" value="/WEB-INF/jsp/home.jsp"/>
+    </definition>
+	<definition extends="default" name="error">
+		<put-attribute name="body" value="/WEB-INF/jsp/error.jsp"/>
+	</definition>
+	
+	<definition extends="default" name="listTicket">
+		<put-attribute name="body" value="/WEB-INF/jsp/ticket/listTicket.jsp"/>
+	</definition>
+	<definition extends="default" name="createTicket">
+		<put-attribute name="body" value="/WEB-INF/jsp/ticket/createTicket.jsp"/>
+	</definition>
+	<definition extends="default" name="createTicketWithEvent">
+		<put-attribute name="body" value="/WEB-INF/jsp/ticket/createTicketWithEvent.jsp"/>
+	</definition>
+
+
+ 	<definition extends="admin" name="createEvent">
+        <put-attribute name="body" value="/WEB-INF/jsp/event/createEvent.jsp"/>
+    </definition>
+    <definition extends="admin" name="updateEvent">
+        <put-attribute name="body" value="/WEB-INF/jsp/event/updateEvent.jsp"/>
+    </definition>
+
+    <definition extends="admin" name="listEvents">
+        <put-attribute name="body" value="/WEB-INF/jsp/event/listEvents.jsp"/>
+    </definition>
+	<definition extends="default" name="viewLocations">
+		<put-attribute name="body" value="/WEB-INF/jsp/event/viewLocations.jsp"/>
+	</definition>
+	<definition extends="default" name="viewEvents">
+		<put-attribute name="body" value="/WEB-INF/jsp/event/viewEvents.jsp"/>
+	</definition>
+
+
+
+
+	 <definition extends="default" name="changePassword">
+		<put-attribute name="body" value="/WEB-INF/jsp/login/changePassword.jsp"/>
+	</definition>
+	
+	<definition extends="default" name="login">
+		<put-attribute name="body" value="/WEB-INF/jsp/login/login.jsp"/>
+	</definition>
+	<definition extends="admin" name="createArtist">
+		<put-attribute name="body" value="/WEB-INF/jsp/artist/createArtist.jsp"/>
+	</definition>
+	<definition extends="admin" name="listArtists">
+		<put-attribute name="body" value="/WEB-INF/jsp/artist/listArtists.jsp"/>
+	</definition>
+	<definition extends="admin" name="updateArtist">
+		<put-attribute name="body" value="/WEB-INF/jsp/artist/updateArtist.jsp"/>
+	</definition>
+	<definition extends="default" name="viewArtists">
+		<put-attribute name="body" value="/WEB-INF/jsp/artist/viewArtists.jsp"/>
+	</definition>
+
+    
+
+</tiles-definitions>

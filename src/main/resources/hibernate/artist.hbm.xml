@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="events.model.Artist" table="artist">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">artist_seq</param>
+			</generator>
+		</id>
+
+		<property name="name" column="name" />
+		<property name="image" type="binary">
+            <column name="IMAGE" not-null="true" />
+        </property>
+
+		<bag name="events" table="event_artist" lazy="false" inverse="true">
+
+		
+
+			<key column="artistid"></key>
+			<many-to-many class="events.model.Event" >
+				<column name="eventid" />
+			</many-to-many>
+
+		</bag>
+
+	</class>
+</hibernate-mapping>
